@@ -4,6 +4,7 @@ import { createPageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 import { FAQSection } from '@/components/sections/FAQSection';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 
 export const metadata = createPageMetadata({
   title: 'Nearby Attractions — Alibag Beaches & Forts near Malhar Baug Resort',
@@ -73,6 +74,12 @@ export default function AttractionsPage() {
         title="Nearby Attractions"
         subtitle="Alibag's beaches, forts, and temples at your doorstep"
         backgroundImage="/ExteriorPhotos/heroimg3.jpeg"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Nearby Attractions', path: '/attractions' },
+        ]}
       />
 
       <section className="py-24 bg-background">

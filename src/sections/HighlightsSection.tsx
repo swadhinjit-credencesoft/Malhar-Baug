@@ -6,66 +6,90 @@ const highlights = [
   {
     icon: Waves,
     title: 'Swimming Pool',
-    description: 'Well-maintained pool open 7 AM – 7 PM for a refreshing dip'
+    description: 'Well-maintained pool open 7 AM – 7 PM for a refreshing dip',
+    image: '/ExteriorPhotos/ext4.jpeg',
   },
   {
     icon: Car,
     title: 'Free Self-Parking',
-    description: 'Ample on-site secure parking for 15+ vehicles'
+    description: 'Ample on-site secure parking for 15+ vehicles',
+    image: '/ExteriorPhotos/parkingarea.jpeg',
   },
   {
     icon: Wifi,
     title: 'Free Wi-Fi',
-    description: 'High-speed internet throughout the property'
+    description: 'High-speed internet throughout the property',
+    image: '/ExteriorPhotos/ext7.jpeg',
   },
   {
     icon: UtensilsCrossed,
     title: 'Home-Style Meals',
-    description: 'Fresh vegetarian and non-vegetarian Konkan meals on request'
+    description: 'Fresh vegetarian and non-vegetarian Konkan meals on request',
+    image: '/ExteriorPhotos/dining.jpeg',
   },
   {
     icon: Home,
     title: 'Villas for Groups',
-    description: 'Spacious villas accommodating groups up to 10–15 guests'
+    description: 'Spacious villas accommodating groups up to 10–15 guests',
+    image: '/ExteriorPhotos/ext2.jpeg',
   },
   {
     icon: Clock,
     title: '24-Hour Front Desk',
-    description: "We're always here whenever you need assistance"
-  }
+    description: "We're always here whenever you need assistance",
+    image: '/ExteriorPhotos/mainentry.jpeg',
+  },
 ];
 
 export function HighlightsSection() {
   return (
-    <section className="py-24 bg-white relative">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <AnimateOnScroll>
-            <SectionLabel>Resort Features</SectionLabel>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground font-bold mb-6">
-              Everything You Need for a Perfect Weekend
-            </h2>
-          </AnimateOnScroll>
-        </div>
+    <section className="py-20 lg:py-24 bg-white relative overflow-hidden">
+      {/* Decorative gradient */}
+      <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-accent/5 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto px-4 lg:px-8 relative">
+        <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
+          <SectionLabel>Resort Features</SectionLabel>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground font-bold leading-tight mb-5">
+            Everything You Need for a Perfect Weekend
+          </h2>
+          <p className="font-sans text-lg text-muted-foreground leading-relaxed">
+            Thoughtful facilities and warm service — so your weekend in Alibag is effortless from
+            arrival to departure.
+          </p>
+        </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {highlights.map((highlight, index) => {
             const Icon = highlight.icon;
             return (
-              <AnimateOnScroll 
+              <AnimateOnScroll
                 key={index}
-                className="bg-white rounded-xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow duration-300"
-                style={{ transitionDelay: `${index * 50}ms` }}
+                className="group relative overflow-hidden rounded-2xl border border-border shadow-sm hover:shadow-xl transition-all duration-300"
+                style={{ transitionDelay: `${(index % 3) * 100}ms` }}
               >
-                <div className="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-6 text-primary">
-                  <Icon className="w-6 h-6" />
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src={highlight.image}
+                    alt={highlight.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10 transition-colors duration-500 group-hover:from-black/85" />
+
+                  <div className="absolute top-4 left-4 w-12 h-12 rounded-full bg-[#d4a853] text-zinc-900 flex items-center justify-center shadow-lg">
+                    <Icon className="w-5 h-5" />
+                  </div>
+
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <h3 className="font-serif text-2xl font-bold text-white mb-2 drop-shadow-sm">
+                      {highlight.title}
+                    </h3>
+                    <p className="font-sans text-sm text-white/85 leading-relaxed">
+                      {highlight.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">
-                  {highlight.title}
-                </h3>
-                <p className="font-sans text-muted-foreground leading-relaxed">
-                  {highlight.description}
-                </p>
               </AnimateOnScroll>
             );
           })}

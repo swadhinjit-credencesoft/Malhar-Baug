@@ -4,6 +4,8 @@ import { createPageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 import { FAQSection } from '@/components/sections/FAQSection';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { PHONE_DISPLAY } from '@/lib/site';
 
 export const metadata = createPageMetadata({
   title: 'About Malhar Baug Resort — Our Story | Alibag',
@@ -39,7 +41,12 @@ export default function AboutPage() {
         subtitle="A Homely Escape in Alibag's Green Heart"
         backgroundImage="/ExteriorPhotos/aboutimg.jpeg"
       />
-
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'About Us', path: '/about' },
+        ]}
+      />
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -160,7 +167,9 @@ export default function AboutPage() {
           {
             question: 'How do I book a stay at the resort?',
             answer:
-              'You can book directly through our online booking engine, or call/WhatsApp us at +91 98765 43210 for assistance with dates, rates, and group plans.',
+              'You can book directly through our online booking engine, or call/WhatsApp us at ' +
+              PHONE_DISPLAY +
+              ' for assistance with dates, rates, and group plans.',
           },
           {
             question: 'Does the resort have parking and Wi-Fi?',

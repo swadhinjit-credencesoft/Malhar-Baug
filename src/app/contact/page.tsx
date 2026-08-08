@@ -2,11 +2,13 @@ import { createPageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { ContactSection } from '@/components/contact/ContactSection';
 import { FAQSection } from '@/components/sections/FAQSection';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { PHONE_DISPLAY } from '@/lib/site';
 
 export const metadata = createPageMetadata({
   title: 'Contact & Booking — Malhar Baug Resort Alibag',
   description:
-    'Contact Malhar Baug Resort to book rooms, check availability, or ask about group rates. Call +91 98765 43210. Address: H.No. 3116, Nagaon, Palhe, Alibag 402204.',
+    `Contact Malhar Baug Resort to book rooms, check availability, or ask about group rates. Call ${PHONE_DISPLAY}. Address: H.No. 3116, Nagaon, Palhe, Alibag 402204.`,
   path: '/contact',
 });
 
@@ -17,6 +19,12 @@ export default function ContactPage() {
         title="Contact & Booking"
         subtitle="Get in touch to check availability or plan your stay"
         backgroundImage="/ExteriorPhotos/mainentry.jpeg"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact & Booking', path: '/contact' },
+        ]}
       />
 
       <section className="py-24 bg-background">
@@ -33,7 +41,9 @@ export default function ContactPage() {
           {
             question: 'How do I book a room at Malhar Baug Resort?',
             answer:
-              'Book directly through our online booking engine, or call or WhatsApp us at +91 98765 43210 and our front desk will confirm availability and rates instantly.',
+              'Book directly through our online booking engine, or call or WhatsApp us at ' +
+              PHONE_DISPLAY +
+              ' and our front desk will confirm availability and rates instantly.',
           },
           {
             question: 'Is an advance payment required?',
@@ -43,7 +53,9 @@ export default function ContactPage() {
           {
             question: 'What is the fastest way to reach you?',
             answer:
-              'Calling or messaging us on WhatsApp at +91 98765 43210 is the fastest way — our front desk is open 24 hours and usually replies within minutes during the day.',
+              'Calling or messaging us on WhatsApp at ' +
+              PHONE_DISPLAY +
+              ' is the fastest way — our front desk is open 24 hours and usually replies within minutes during the day.',
           },
           {
             question: 'What are the check-in and check-out timings?',

@@ -18,6 +18,7 @@ import { PageHero } from '@/components/ui/PageHero';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { FAQSection } from '@/components/sections/FAQSection';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 
 export const metadata = createPageMetadata({
   title: 'Amenities & Facilities — Malhar Baug Resort Alibag',
@@ -108,6 +109,12 @@ export default function AmenitiesPage() {
         title="Amenities & Facilities"
         subtitle="Everything you need for a relaxed stay, on-site"
         backgroundImage="/ExteriorPhotos/playing.jpeg"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Amenities & Facilities', path: '/amenities' },
+        ]}
       />
 
       <section className="py-20 lg:py-24 bg-background">

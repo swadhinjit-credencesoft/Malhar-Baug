@@ -4,6 +4,7 @@ import { createPageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 import { FAQSection } from '@/components/sections/FAQSection';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { BOOKING_ENGINE_URL } from '@/lib/site';
 
 export const metadata = createPageMetadata({
@@ -20,6 +21,12 @@ export default function DiningPage() {
         title="Dining"
         subtitle="Home-style Konkan cooking, made fresh for you"
         backgroundImage="/ExteriorPhotos/dining.jpeg"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Dining', path: '/dining' },
+        ]}
       />
 
       <section className="py-24 bg-background">

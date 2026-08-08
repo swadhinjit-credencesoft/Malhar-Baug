@@ -1,5 +1,5 @@
 import { Phone } from 'lucide-react';
-import { BOOKING_ENGINE_URL } from '@/lib/site';
+import { BOOKING_ENGINE_URL, PHONE_DISPLAY, PHONE_TEL } from '@/lib/site';
 
 export function BookingBar() {
   return (
@@ -7,8 +7,8 @@ export function BookingBar() {
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center space-x-2 text-primary-foreground">
           <Phone className="w-4 h-4" />
-          <a href="tel:+919876543210" className="text-sm font-medium">
-            +91 98765 43210
+          <a href={PHONE_TEL} className="text-sm font-medium">
+            {PHONE_DISPLAY}
           </a>
         </div>
         <a

@@ -19,6 +19,7 @@ import { PageHero } from '@/components/ui/PageHero';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { FAQSection } from '@/components/sections/FAQSection';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { BOOKING_ENGINE_URL } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
@@ -150,6 +151,12 @@ export default function RoomsPage() {
         title="Rooms & Villas"
         subtitle="Comfortable, air-conditioned stays for every group size"
         backgroundImage="/ExteriorPhotos/heroimg2.jpeg"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Rooms & Villas', path: '/rooms' },
+        ]}
       />
 
       <section className="py-20 lg:py-24 bg-background">

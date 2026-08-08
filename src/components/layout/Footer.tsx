@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
-import { BOOKING_ENGINE_URL } from '@/lib/site';
+import { BOOKING_ENGINE_URL, PHONE_DISPLAY, PHONE_TEL } from '@/lib/site';
 
 export function Footer() {
   return (
@@ -82,8 +82,8 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-3 text-sm text-white/80">
                 <Phone className="w-5 h-5 text-sidebar-primary shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-white transition-colors">
-                  +91 98765 43210
+                <a href={PHONE_TEL} className="hover:text-white transition-colors">
+                  {PHONE_DISPLAY}
                 </a>
               </li>
               <li className="flex items-center space-x-3 text-sm text-white/80">
