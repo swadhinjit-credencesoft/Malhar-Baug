@@ -12,7 +12,7 @@ export function IntroSection() {
             <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <div className="aspect-[4/5] lg:aspect-square">
                 <img 
-                  src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200&q=80" 
+                  src="/ExteriorPhotos/outer.jpeg" 
                   alt="Malhar Baug Resort Garden" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

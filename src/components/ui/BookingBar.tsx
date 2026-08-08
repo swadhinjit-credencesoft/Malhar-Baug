@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { Phone } from 'lucide-react';
+import { BOOKING_ENGINE_URL } from '@/lib/site';
 
 export function BookingBar() {
   return (
@@ -11,12 +11,14 @@ export function BookingBar() {
             +91 98765 43210
           </a>
         </div>
-        <Link
-          href="/contact"
+        <a
+          href={BOOKING_ENGINE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-2 rounded-full font-medium text-sm transition-colors"
         >
           Book Now
-        </Link>
+        </a>
       </div>
     </div>
   );

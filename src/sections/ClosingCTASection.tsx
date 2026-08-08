@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AnimateOnScroll } from '../components/ui/AnimateOnScroll';
+import { BOOKING_ENGINE_URL } from '../lib/site';
 
 export function ClosingCTASection() {
   return (
@@ -15,12 +16,14 @@ export function ClosingCTASection() {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link 
-              href="/contact"
+            <a 
+              href={BOOKING_ENGINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto bg-white text-accent hover:bg-white/90 px-8 py-3.5 rounded-full font-bold text-base transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               Check Availability
-            </Link>
+            </a>
             
             <Link 
               href="/contact"

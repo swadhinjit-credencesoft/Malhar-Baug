@@ -1,9 +1,10 @@
-import Link from 'next/link';
 import { UtensilsCrossed, AlertCircle } from 'lucide-react';
 
 import { createPageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
+import { FAQSection } from '@/components/sections/FAQSection';
+import { BOOKING_ENGINE_URL } from '@/lib/site';
 
 export const metadata = createPageMetadata({
   title: 'Dining — Home-Style Konkan Food at Malhar Baug Resort',
@@ -18,7 +19,7 @@ export default function DiningPage() {
       <PageHero
         title="Dining"
         subtitle="Home-style Konkan cooking, made fresh for you"
-        backgroundImage="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80"
+        backgroundImage="/ExteriorPhotos/dining.jpeg"
       />
 
       <section className="py-24 bg-background">
@@ -49,7 +50,7 @@ export default function DiningPage() {
             <AnimateOnScroll className="h-full min-h-[400px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg border border-border group">
                 <img
-                  src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=80"
+                  src="/ExteriorPhotos/din1.jpeg"
                   alt="Konkan Fish Thali"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -124,16 +125,56 @@ export default function DiningPage() {
                   the kitchen can accommodate you.
                 </p>
               </div>
-              <Link
-                href="/contact"
+              <a
+                href={BOOKING_ENGINE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="shrink-0 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium transition-colors"
               >
                 Contact Kitchen
-              </Link>
+              </a>
             </div>
           </AnimateOnScroll>
         </div>
       </section>
+
+      <FAQSection
+        label="Dining FAQ"
+        title="Questions About Meals & Dining"
+        subtitle="From meal plans to Konkan specialties — here’s what guests ask about our kitchen."
+        faqs={[
+          {
+            question: 'Is breakfast included with the stay?',
+            answer:
+              'Yes, breakfast is included in the room rate. Lunch and dinner are charged separately or can be bundled as a meal plan add-on.',
+          },
+          {
+            question: 'What kind of food is served?',
+            answer:
+              'We serve home-style vegetarian and non-vegetarian meals cooked with local ingredients, including Konkan specialties like fresh fish thali, solkadhi, and seasonal curries.',
+          },
+          {
+            question: 'Do you have vegetarian options?',
+            answer:
+              'Yes, we have plenty of vegetarian options. Please share any dietary preferences or restrictions with the kitchen in advance.',
+          },
+          {
+            question: 'How much notice does the kitchen need?',
+            answer:
+              'Please inform the kitchen at least 2–3 hours ahead so meals can be prepared fresh for you.',
+          },
+          {
+            question: 'What are the meal timings and prices?',
+            answer:
+              'Breakfast is 8:00–10:00 AM (included), lunch 1:00–2:30 PM (veg ₹250 / non-veg ₹350 per head), evening snacks 5:00–6:00 PM, and dinner 8:00–9:30 PM (veg ₹250 / non-veg ₹400 per head).',
+          },
+          {
+            question: 'Can you pack meals for a day trip or beach outing?',
+            answer:
+              'Yes, packed meals can be arranged on request. Let the kitchen know your plan in advance and we’ll have it ready.',
+          },
+        ]}
+      />
     </>
   );
 }

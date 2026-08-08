@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { AnimateOnScroll } from '../components/ui/AnimateOnScroll';
+import { BOOKING_ENGINE_URL } from '../lib/site';
 
 export function WhyBookDirectSection() {
   return (
@@ -44,12 +44,14 @@ export function WhyBookDirectSection() {
               ))}
             </div>
 
-            <Link 
-              href="/contact"
+            <a 
+              href={BOOKING_ENGINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-[#d4a853] hover:bg-[#d4a853]/90 text-zinc-900 px-8 py-4 rounded-full font-bold text-base transition-all shadow-lg hover:scale-105"
             >
               Book Now — +91 98765 43210
-            </Link>
+            </a>
           </AnimateOnScroll>
         </div>
       </div>

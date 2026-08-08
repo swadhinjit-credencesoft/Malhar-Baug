@@ -3,6 +3,7 @@ import { Heart } from 'lucide-react';
 import { createPageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
+import { FAQSection } from '@/components/sections/FAQSection';
 
 export const metadata = createPageMetadata({
   title: 'About Malhar Baug Resort — Our Story | Alibag',
@@ -36,7 +37,7 @@ export default function AboutPage() {
       <PageHero
         title="About Us"
         subtitle="A Homely Escape in Alibag's Green Heart"
-        backgroundImage="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1920&q=80"
+        backgroundImage="/ExteriorPhotos/aboutimg.jpeg"
       />
 
       <section className="py-24 bg-background">
@@ -67,7 +68,7 @@ export default function AboutPage() {
               <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-border group relative">
                 <div className="absolute inset-0 bg-primary/10 mix-blend-multiply z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80"
+                  src="/ExteriorPhotos/outer.jpeg"
                   alt="Family and guests enjoying nature"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -79,7 +80,7 @@ export default function AboutPage() {
 
       <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
         {/* Background texture */}
-        <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 opacity-10 bg-[url('/ExteriorPhotos/entry.jpeg')] bg-cover bg-center mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-primary/90"></div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -130,6 +131,44 @@ export default function AboutPage() {
           </AnimateOnScroll>
         </div>
       </section>
+
+      <FAQSection
+        label="About the Resort"
+        title="Questions About Malhar Baug Resort"
+        subtitle="Learn more about what makes our family-run resort in Nagaon, Alibag special."
+        faqs={[
+          {
+            question: 'Who runs Malhar Baug Resort?',
+            answer:
+              'Malhar Baug Resort is a family-run property. We take pride in personal service, genuine Konkan hospitality, and treating every guest as part of our own home.',
+          },
+          {
+            question: 'Is the resort suitable for group outings?',
+            answer:
+              'Yes. We regularly host family holidays, office outings, and small group getaways, with spacious villas, green grounds, and group meal plans.',
+          },
+          {
+            question: 'What makes Malhar Baug different from other Alibag resorts?',
+            answer:
+              'Our home-style feel — comfortable, affordable stays in a quiet green setting, home-cooked Konkan food, and warm personal attention from our family and staff.',
+          },
+          {
+            question: 'Is the resort family friendly?',
+            answer:
+              'Absolutely. We have AC rooms and villas for families of every size, open lawns for children, and a pool — all in a safe, peaceful environment.',
+          },
+          {
+            question: 'How do I book a stay at the resort?',
+            answer:
+              'You can book directly through our online booking engine, or call/WhatsApp us at +91 98765 43210 for assistance with dates, rates, and group plans.',
+          },
+          {
+            question: 'Does the resort have parking and Wi-Fi?',
+            answer:
+              'Yes, free on-site parking (15+ vehicles) and free high-speed Wi-Fi are available for all guests.',
+          },
+        ]}
+      />
     </>
   );
 }

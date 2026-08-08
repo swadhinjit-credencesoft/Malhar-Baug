@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { BOOKING_ENGINE_URL } from '@/lib/site';
 
 export function Footer() {
   return (
@@ -36,6 +37,14 @@ export function Footer() {
               Your peaceful getaway in Alibag. Spacious rooms, private villas, a pool, and
               authentic home-style Konkan food.
             </p>
+            <a
+              href={BOOKING_ENGINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#d4a853] hover:bg-[#d4a853]/90 text-zinc-900 px-6 py-3 rounded-full font-semibold text-sm transition-all shadow-md hover:shadow-lg"
+            >
+              Book Your Stay
+            </a>
           </div>
 
           {/* Quick Links */}

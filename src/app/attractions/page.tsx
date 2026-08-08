@@ -3,6 +3,7 @@ import { MapPin, ExternalLink } from 'lucide-react';
 import { createPageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll';
+import { FAQSection } from '@/components/sections/FAQSection';
 
 export const metadata = createPageMetadata({
   title: 'Nearby Attractions — Alibag Beaches & Forts near Malhar Baug Resort',
@@ -17,7 +18,7 @@ const attractions = [
     distance: '2 km',
     time: '5 min drive',
     description: 'The closest beach to the resort. Clean, flat sands popular for water sports.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+    image: '/ExteriorPhotos/ext4.jpeg',
   },
   {
     name: 'Akshi Beach',
@@ -25,14 +26,14 @@ const attractions = [
     time: '10 min drive',
     description:
       'A quieter, serene beach lined with suru (casuarina) trees. Great for peaceful walks.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+    image: '/ExteriorPhotos/ext7.jpeg',
   },
   {
     name: 'Varsoli Beach',
     distance: '6 km',
     time: '12 min drive',
     description: 'Known for its white sand and dense casuarina groves.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+    image: '/ExteriorPhotos/exte6.jpeg',
   },
   {
     name: 'Revdanda Beach Fort',
@@ -40,28 +41,28 @@ const attractions = [
     time: '~15 min drive',
     description:
       'Historic Portuguese fort ruins right on the beach, blending history with coastal views.',
-    image: 'https://images.unsplash.com/photo-1599413987323-b0c9e5af09c4?w=800&q=80',
+    image: '/ExteriorPhotos/entry.jpeg',
   },
   {
     name: 'Alibag Beach',
     distance: '8.7 km',
     time: '15–20 min drive',
     description: 'The main town beach, offering black sands and views of the Kolaba Fort.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+    image: '/ExteriorPhotos/ext1.jpeg',
   },
   {
     name: 'Local Hanuman Temple',
     distance: '8–9 km',
     time: '15 min drive',
     description: 'A popular local spiritual site with peaceful surroundings.',
-    image: 'https://images.unsplash.com/photo-1599413987323-b0c9e5af09c4?w=800&q=80',
+    image: '/ExteriorPhotos/temple.jpeg',
   },
   {
     name: 'Kolaba Fort',
     distance: '14 km',
     time: '25 min drive',
     description: 'Historic sea fort accessible by foot or horse cart during low tide.',
-    image: 'https://images.unsplash.com/photo-1599413987323-b0c9e5af09c4?w=800&q=80',
+    image: '/ExteriorPhotos/mainentry.jpeg',
   },
 ];
 
@@ -71,7 +72,7 @@ export default function AttractionsPage() {
       <PageHero
         title="Nearby Attractions"
         subtitle="Alibag's beaches, forts, and temples at your doorstep"
-        backgroundImage="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80"
+        backgroundImage="/ExteriorPhotos/heroimg3.jpeg"
       />
 
       <section className="py-24 bg-background">
@@ -139,6 +140,44 @@ export default function AttractionsPage() {
           </AnimateOnScroll>
         </div>
       </section>
+
+      <FAQSection
+        label="Attractions FAQ"
+        title="Questions About Nearby Places"
+        subtitle="How close are Alibag’s beaches and forts to the resort, and how to plan your day out."
+        faqs={[
+          {
+            question: 'Which is the closest beach to Malhar Baug Resort?',
+            answer:
+              'Nagaon Beach is the closest at just 2 km (about a 5-minute drive). Akshi Beach is 5 km and Varsoli Beach is 6 km away.',
+          },
+          {
+            question: 'How far is Alibag Beach?',
+            answer:
+              'Alibag Beach, the main town beach, is about 8.7 km away — a 15–20 minute drive from the resort.',
+          },
+          {
+            question: 'How far is Revdanda Fort?',
+            answer:
+              'Revdanda Beach Fort is about 8.1 km away, roughly a 15-minute drive. It’s a historic Portuguese fort ruin right on the beach.',
+          },
+          {
+            question: 'Can you help arrange transport to visit these places?',
+            answer:
+              'Yes, we can help arrange local transport on request (charges apply). Our team is happy to plan a day trip covering beaches and forts.',
+          },
+          {
+            question: 'What is the best time to visit Alibag?',
+            answer:
+              'October to March is the most pleasant time to visit. Weekends are popular, so we recommend booking in advance for the best-direct rates.',
+          },
+          {
+            question: 'Is Kolaba Fort worth visiting?',
+            answer:
+              'Yes. Kolaba Fort (about 14 km away) is a historic sea fort accessible by foot or horse cart during low tide — a highlight of any Alibag trip.',
+          },
+        ]}
+      />
     </>
   );
 }

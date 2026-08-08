@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { BOOKING_ENGINE_URL } from '@/lib/site';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -92,12 +93,14 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block">
-            <Link
-              href="/contact"
+            <a
+              href={BOOKING_ENGINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2.5 rounded-full font-medium text-sm transition-colors shadow-sm"
             >
               Book Now
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -134,12 +137,14 @@ export function Navbar() {
             </Link>
           ))}
           <div className="pt-4 pb-6">
-            <Link
-              href="/contact"
+            <a
+              href={BOOKING_ENGINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-center bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full font-medium text-base transition-colors"
             >
               Book Now
-            </Link>
+            </a>
           </div>
         </div>
       </div>
