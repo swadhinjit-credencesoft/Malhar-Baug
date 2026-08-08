@@ -42,7 +42,8 @@ export const metadata: Metadata = {
     'beach resort Maharashtra',
   ],
   icons: {
-    icon: '/favicon.svg',
+    icon: '/malharlogo.jpeg',
+    apple: '/malharlogo.jpeg',
   },
   openGraph: {
     title: 'Malhar Baug Resort — Peaceful Getaway in Alibag',

@@ -9,29 +9,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center space-x-2">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-sidebar-primary"
-              >
-                <path d="M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z" />
-                <path d="M12 22V12" />
-              </svg>
-              <div className="flex flex-col">
-                <span className="font-serif font-bold text-xl leading-none text-white">
-                  Malhar Baug
-                </span>
-                <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-sidebar-primary mt-1">
-                  Resort
-                </span>
-              </div>
+            <Link href="/" className="flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/malharlogo.jpeg"
+                alt="Malhar Baug Resort"
+                width="112"
+                height="112"
+                className="h-28 w-28 object-contain rounded-full bg-white"
+              />
             </Link>
             <p className="text-white/80 text-sm max-w-xs leading-relaxed">
               Your peaceful getaway in Alibag. Spacious rooms, private villas, a pool, and

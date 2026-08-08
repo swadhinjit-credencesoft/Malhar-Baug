@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next';
 
 import { siteConfig } from '@/lib/seo';
 
+export const dynamic = 'force-static';
+
 type RouteConfig = {
   path: string;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';

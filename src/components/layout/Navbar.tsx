@@ -47,29 +47,15 @@ export function Navbar() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 z-50">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-primary"
-            >
-              <path d="M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z" />
-              <path d="M12 22V12" />
-            </svg>
-            <div className="flex flex-col">
-              <span className="font-serif font-bold text-xl leading-none text-foreground">
-                Malhar Baug
-              </span>
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-accent mt-1">
-                Resort
-              </span>
-            </div>
+          <Link href="/" className="flex items-center z-50">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/malharlogo.jpeg"
+              alt="Malhar Baug Resort"
+              width="80"
+              height="80"
+              className="h-20 w-20 object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}

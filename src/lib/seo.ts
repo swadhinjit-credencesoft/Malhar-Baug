@@ -16,7 +16,7 @@ export const siteConfig = {
   checkOutTime: '11:00',
   priceRange: '₹₹',
   image: 'https://www.malharbaugresort.com/ExteriorPhotos/heroimg1.jpeg',
-  logo: 'https://www.malharbaugresort.com/favicon.svg',
+  logo: 'https://www.malharbaugresort.com/malharlogo.jpeg',
   sameAs: ['https://facebook.com', 'https://instagram.com'],
 };
 
