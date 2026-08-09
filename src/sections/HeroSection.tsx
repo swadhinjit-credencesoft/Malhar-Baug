@@ -73,49 +73,51 @@ export function HeroSection() {
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 lg:px-8 text-center mt-16">
-        <div className="inline-block mb-6">
-          <span className="font-sans text-xs sm:text-sm uppercase tracking-[0.3em] text-[#d4a853] font-semibold">
-            Alibag · Maharashtra
-          </span>
-        </div>
+      <div className="relative z-20 container mx-auto px-4 lg:px-8">
+        <div className="flex flex-col items-center justify-center text-center min-h-[100dvh] py-24 md:py-28">
+          <div className="inline-block mb-5">
+            <span className="font-sans text-xs sm:text-sm uppercase tracking-[0.3em] text-[#d4a853] font-semibold">
+              Alibag · Maharashtra
+            </span>
+          </div>
 
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-[5.5rem] text-white font-bold mb-4 drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
-          Malhar Baug Resort
-        </h1>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] text-white font-bold mb-5 drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
+            Malhar Baug Resort
+          </h1>
 
-        <div
-          key={active}
-          className="animate-in fade-in duration-1000"
-        >
-          <h2 className="font-serif italic text-2xl md:text-3xl text-white/95 mb-8 font-light drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
-            {current.tagline}
-          </h2>
-
-          <p className="font-sans text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed font-light drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
-            {current.description}
-          </p>
-        </div>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href={BOOKING_ENGINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto bg-[#d4a853] hover:bg-[#d4a853]/90 text-zinc-900 px-8 py-3.5 rounded-full font-medium text-base transition-all hover:scale-105 shadow-lg"
+          <div
+            key={active}
+            className="animate-in fade-in duration-1000 max-w-3xl"
           >
-            Check Availability
-          </a>
+            <h2 className="font-serif italic text-xl sm:text-2xl md:text-3xl text-white/95 mb-6 md:mb-8 font-light drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
+              {current.tagline}
+            </h2>
 
-          <a
-            href={BOOKING_ENGINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto group flex items-center justify-center space-x-2 border border-white/40 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white px-8 py-3.5 rounded-full font-medium text-base transition-all"
-          >
-            <CalendarCheck className="w-4 h-4 group-hover:animate-pulse" />
-            <span>Book Direct</span>
-          </a>
+            <p className="font-sans text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed font-light drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
+              {current.description}
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 w-full sm:w-auto">
+            <a
+              href={BOOKING_ENGINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-[#d4a853] hover:bg-[#d4a853]/90 text-zinc-900 px-8 py-3.5 rounded-full font-medium text-base transition-all hover:scale-105 shadow-lg"
+            >
+              Check Availability
+            </a>
+
+            <a
+              href={BOOKING_ENGINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto group flex items-center justify-center space-x-2 border border-white/40 bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white px-8 py-3.5 rounded-full font-medium text-base transition-all"
+            >
+              <CalendarCheck className="w-4 h-4 group-hover:animate-pulse" />
+              <span>Book Direct</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -135,7 +137,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden sm:block">
         <button
           onClick={scrollToNext}
           className="text-white/70 hover:text-white transition-colors p-2 animate-bounce"

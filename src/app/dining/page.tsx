@@ -72,7 +72,7 @@ export default function DiningPage() {
 
             <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse">
+                <table className="w-full min-w-[560px] text-left border-collapse">
                   <thead>
                     <tr className="bg-secondary text-foreground">
                       <th className="py-4 px-6 font-serif font-bold text-lg border-b border-border">

@@ -26,7 +26,7 @@ export function TestimonialsSection() {
               Guest Love
             </h2>
             
-            <div className="inline-flex items-center space-x-2 bg-background px-4 py-2 rounded-full border border-border">
+            <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 bg-background px-4 py-2 rounded-full border border-border">
               <span className="font-medium text-foreground text-sm">4.2</span>
               <div className="flex text-[#d4a853]">
                 {[...Array(4)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}

@@ -54,7 +54,7 @@ export function Navbar() {
               alt="Malhar Baug Resort"
               width="80"
               height="80"
-              className="h-20 w-20 object-contain"
+              className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
             />
           </Link>
 
@@ -103,13 +103,13 @@ export function Navbar() {
       {/* Mobile Nav Menu */}
       <div
         className={cn(
-          'fixed inset-x-0 top-[60px] bg-white border-t border-border shadow-lg transition-all duration-300 ease-in-out lg:hidden origin-top',
+          'absolute left-0 right-0 top-full bg-white border-t border-border shadow-lg transition-all duration-300 ease-in-out lg:hidden origin-top',
           isMobileMenuOpen
             ? 'opacity-100 scale-y-100 pointer-events-auto'
             : 'opacity-0 scale-y-0 pointer-events-none',
         )}
       >
-        <div className="flex flex-col py-4 px-6 space-y-4 max-h-[calc(100vh-60px)] overflow-y-auto">
+        <div className="flex flex-col py-4 px-6 space-y-4 max-h-[calc(100dvh-5rem)] overflow-y-auto">
           {navLinks.map((link) => (
             <Link
               key={link.name}

@@ -7,7 +7,7 @@ export function BookingBar() {
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center space-x-2 text-primary-foreground">
           <Phone className="w-4 h-4" />
-          <a href={PHONE_TEL} className="text-sm font-medium">
+          <a href={PHONE_TEL} className="text-sm font-medium whitespace-nowrap">
             {PHONE_DISPLAY}
           </a>
         </div>

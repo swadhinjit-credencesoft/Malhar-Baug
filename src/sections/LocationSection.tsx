@@ -30,9 +30,9 @@ export function LocationSection() {
                 { name: "Akshi Beach", dist: "5 km (10 min drive)" },
                 { name: "Local Hanuman Temple", dist: "8–9 km" },
               ].map((place, i) => (
-                <li key={i} className="flex justify-between items-center border-b border-border/60 pb-3 last:border-0 last:pb-0">
+                <li key={i} className="flex justify-between items-center gap-4 border-b border-border/60 pb-3 last:border-0 last:pb-0">
                   <span className="font-sans font-medium text-foreground">{place.name}</span>
-                  <span className="font-sans text-sm text-muted-foreground">{place.dist}</span>
+                  <span className="font-sans text-sm text-muted-foreground text-right">{place.dist}</span>
                 </li>
               ))}
             </ul>

@@ -162,11 +162,11 @@ export function ContactSection() {
               allowFullScreen
               title="Malhar Baug Resort location on Google Maps"
             />
-            <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-white/95 backdrop-blur rounded-xl shadow-md px-5 py-4 flex items-center space-x-3">
+            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-xl shadow-md px-5 py-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:space-x-3">
               <div className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center shrink-0">
                 <Navigation className="w-4 h-4" />
               </div>
-              <div className="min-w-0">
+              <div className="min-w-0 w-full sm:w-auto">
                 <p className="font-serif font-bold text-foreground">Malhar Baug Resort</p>
                 <p className="text-xs text-muted-foreground truncate">{ADDRESS_LINE}</p>
               </div>
@@ -174,7 +174,7 @@ export function ContactSection() {
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-auto shrink-0 inline-flex items-center space-x-1.5 bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                className="sm:ml-auto shrink-0 inline-flex items-center space-x-1.5 bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium transition-colors"
               >
                 <span>Directions</span>
                 <ExternalLink className="w-3.5 h-3.5" />

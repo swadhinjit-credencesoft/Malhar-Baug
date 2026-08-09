@@ -74,7 +74,7 @@ export function WhyBookDirectSection() {
             href={BOOKING_ENGINE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-[#d4a853] hover:bg-[#d4a853]/90 text-zinc-900 px-10 py-4 rounded-full font-bold text-base transition-all shadow-lg hover:scale-105"
+            className="inline-flex items-center justify-center w-full sm:w-auto bg-[#d4a853] hover:bg-[#d4a853]/90 text-zinc-900 px-6 sm:px-10 py-4 rounded-full font-bold text-base transition-all shadow-lg hover:scale-105"
           >
             Book Now — {PHONE_DISPLAY}
           </a>
